@@ -1,8 +1,6 @@
-:rotating_light: **THIS PROJECT IS NO LONGER MAINTAINED** :rotating_light:
-
 # puppet-google-chrome
 
-![Puppet Google Chrome CI](https://github.com/jamesnetherton/puppet-google-chrome/workflows/Puppet%20Google%20Chrome%20CI/badge.svg?branch=master)
+![Puppet Google Chrome CI](https://github.com/GEANT/puppet-google-chrome/workflows/Puppet%20Google%20Chrome%20CI/badge.svg?branch=master)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/jamesnetherton/google_chrome.svg)](https://forge.puppet.com/jamesnetherton/google_chrome)
 [![Puppet Forge](https://img.shields.io/puppetforge/f/jamesnetherton/google_chrome.svg?maxAge=600)](https://forge.puppet.com/jamesnetherton/google_chrome)
 [![Puppet Forge](https://img.shields.io/puppetforge/dt/jamesnetherton/google_chrome.svg?maxAge=600)](https://forge.puppet.com/jamesnetherton/google_chrome)
@@ -13,7 +11,7 @@
 
 Puppet module to install the Google Chrome web browser module. Currently supports installation on:
 
-* Fedora
+* CentOS / Fedora
 * Debian / Ubuntu
 * openSUSE
 
@@ -22,7 +20,7 @@ Puppet module to install the Google Chrome web browser module. Currently support
 To install the stable version of Google Chrome, include or declare the google_chrome class.
 
 ```puppet
-include 'google_chrome'
+include google_chrome
 ```
 
 ```puppet
@@ -43,6 +41,7 @@ class { 'google_chrome':
   version => 'beta',
 }
 ```
+
 To modify the full set of default parameters.
 
 ```puppet
