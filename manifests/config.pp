@@ -40,15 +40,17 @@
 #   Default: 'https://dl.google.com/linux/chrome/rpm/stable/x86_64'
 #
 class google_chrome::config (
-  Stdlib::Absolutepath $defaults_file,
-  String $repo_name,
-  Variant[Stdlib::Httpsurl, Stdlib::Httpurl] $repo_base_url,
-  Stdlib::Httpsurl $repo_gpg_key,
-  String $package_name,
-  String $version,
-  String $repo_gpg_key_id,
-  Optional[String] $repo_gpg_key_options = undef,
-  Variant[Stdlib::Httpsurl, Stdlib::Httpurl, Undef]  $defaults_proxy_pac_url = undef,
+  Stdlib::Absolutepath $defaults_file    = $google_chrome::params::defaults_file,
+  String $repo_name                      = $google_chrome::params::repo_name,
+  String $repo_base_url                  = $google_chrome::params::repo_base_url,
+  Stdlib::Httpsurl $repo_gpg_key         = $google_chrome::params::repo_gpg_key,
+  String $package_name                   = $google_chrome::params::package_name,
+  String $version                        = $google_chrome::params::version,
+  String $repo_gpg_key_id                = $google_chrome::params::repo_gpg_key_id,
+  Optional[String] $repo_gpg_key_options = $google_chrome::params::repo_gpg_key_options,
+  Variant[
+    Stdlib::Httpsurl, Stdlib::Httpurl, Undef
+  ] $defaults_proxy_pac_url              = $google_chrome::params::defaults_proxy_pac_url,
 ) {
   file { $defaults_file:
     ensure  => 'file',

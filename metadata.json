@@ -1,6 +1,6 @@
 {
   "name": "geant-google_chrome",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "author": "James Netherton",
   "license": "MIT",
   "summary": "Installs the Google Chrome web browser",

@@ -65,16 +65,18 @@
 # Copyright 2014 James Netherton
 #
 class google_chrome (
-  String $ensure                                                            = $google_chrome::params::ensure,
-  Enum['stable','unstable','beta'] $version                                 = $google_chrome::params::version,
-  String $package_name                                                      = $google_chrome::params::package_name,
-  Stdlib::Httpsurl $repo_gpg_key                                            = $google_chrome::params::repo_gpg_key,
-  String $repo_gpg_key_id                                                   = $google_chrome::params::repo_gpg_key_id,
-  Optional[String] $repo_gpg_key_options                                    = $google_chrome::params::repo_gpg_key_options,
-  String $repo_name                                                         = $google_chrome::params::repo_name,
-  Stdlib::Absolutepath $defaults_file                                       = $google_chrome::params::defaults_file,
-  Variant[Stdlib::Httpsurl, Stdlib::Httpurl, Undef] $defaults_proxy_pac_url = $google_chrome::params::defaults_proxy_pac_url,
-  String $repo_base_url                                                     = $google_chrome::params::repo_base_url
+  String $ensure                            = $google_chrome::params::ensure,
+  Enum['stable','unstable','beta'] $version = $google_chrome::params::version,
+  String $package_name                      = $google_chrome::params::package_name,
+  Stdlib::Httpsurl $repo_gpg_key            = $google_chrome::params::repo_gpg_key,
+  String $repo_gpg_key_id                   = $google_chrome::params::repo_gpg_key_id,
+  Optional[String] $repo_gpg_key_options    = $google_chrome::params::repo_gpg_key_options,
+  String $repo_name                         = $google_chrome::params::repo_name,
+  Stdlib::Absolutepath $defaults_file       = $google_chrome::params::defaults_file,
+  String $repo_base_url                     = $google_chrome::params::repo_base_url,
+  Variant[
+    Stdlib::Httpsurl, Stdlib::Httpurl, Undef
+  ] $defaults_proxy_pac_url                 = $google_chrome::params::defaults_proxy_pac_url,
 ) inherits google_chrome::params {
   include google_chrome::config
   include google_chrome::install
