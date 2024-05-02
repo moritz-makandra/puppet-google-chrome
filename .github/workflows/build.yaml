@@ -109,11 +109,3 @@ jobs:
       - name: Bundle Install
         run: |
           bundle install --path vendor/bundle
-      - name: Puppet Module Build
-        run: |
-          bundle exec puppet module build
-      - name: Upload Module
-        uses: actions/upload-artifact@v2
-        with:
-          name: puppet-google-chrome
-          path: ./pkg/*.tar.gz
