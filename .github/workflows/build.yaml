@@ -85,8 +85,8 @@ jobs:
           bundle install --path vendor/bundle
       - name: Integration Test - ${{ matrix.os }}
         run: |
-          docker build -f dockerfiles/${{ matrix.os }} -t jamesnetherton/google-chrome-${{ matrix.os }} .
-          docker run --rm jamesnetherton/google-chrome-${{ matrix.os }}
+          docker build -f dockerfiles/${{ matrix.os }} -t geant/google-chrome-${{ matrix.os }} .
+          docker run --rm geant/google-chrome-${{ matrix.os }}
 
   module-build:
     if: contains(github.ref, 'refs/tags')

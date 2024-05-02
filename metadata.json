@@ -1,12 +1,12 @@
 {
-  "name": "jamesnetherton-google_chrome",
+  "name": "geant-google_chrome",
   "version": "0.20.0",
   "author": "James Netherton",
   "license": "MIT",
   "summary": "Installs the Google Chrome web browser",
-  "source": "https://github.com/jamesnetherton/puppet-google-chrome",
-  "project_page": "https://forge.puppetlabs.com/jamesnetherton/google_chrome",
-  "issues_url": "https://github.com/jamesnetherton/puppet-google-chrome/issues",
+  "source": "https://github.com/geant/puppet-google-chrome",
+  "project_page": "https://forge.puppetlabs.com/geant/google_chrome",
+  "issues_url": "https://github.com/geant/puppet-google-chrome/issues",
   "tags": [
     "chrome",
     "google",
