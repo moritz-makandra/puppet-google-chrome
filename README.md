@@ -1,4 +1,4 @@
-# puppet-google-chrome
+# Google Chrome
 
 ![Puppet Google Chrome CI](https://github.com/GEANT/puppet-google-chrome/workflows/Puppet%20Google%20Chrome%20CI/badge.svg?branch=master)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/jamesnetherton/google_chrome.svg)](https://forge.puppet.com/jamesnetherton/google_chrome)
@@ -6,6 +6,12 @@
 [![Puppet Forge](https://img.shields.io/puppetforge/dt/jamesnetherton/google_chrome.svg?maxAge=600)](https://forge.puppet.com/jamesnetherton/google_chrome)
 [![Puppet Forge](https://img.shields.io/puppetforge/rc/jamesnetherton.svg?maxAge=600)](https://forge.puppet.com/jamesnetherton/google_chrome)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=600)](https://opensource.org/licenses/MIT)
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Usage](#usage)
+3. [Notes](#notes)
 
 ## Overview
 
@@ -58,3 +64,7 @@ class { 'google_chrome':
   repo_base_url          => 'https://dl.google.com/linux/chrome/rpm/stable/x86_64'
 }
 ```
+
+## Notes
+
+Forked from [jamesnetherton/google_chrome](https://forge.puppetlabs.com/modules/jamesnetherton/google_chrome/readme)
