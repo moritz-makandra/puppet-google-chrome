@@ -74,7 +74,7 @@ class google_chrome (
   String $repo_name                                                         = $google_chrome::params::repo_name,
   Stdlib::Absolutepath $defaults_file                                       = $google_chrome::params::defaults_file,
   Variant[Stdlib::Httpsurl, Stdlib::Httpurl, Undef] $defaults_proxy_pac_url = $google_chrome::params::defaults_proxy_pac_url,
-  Variant[Stdlib::Httpsurl, Stdlib::Httpurl] $repo_base_url                 = $google_chrome::params::repo_base_url
+  String $repo_base_url                                                     = $google_chrome::params::repo_base_url
 ) inherits google_chrome::params {
   include google_chrome::config
   include google_chrome::install
