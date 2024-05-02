@@ -1,4 +1,8 @@
-class google_chrome::params() {
+# == Class: google_chrome
+#
+# Installs the Google Chrome web browser.
+#
+class google_chrome::params {
   $ensure                 = 'installed'
   $version                = 'stable'
   $package_name           = 'google-chrome'
@@ -9,9 +13,9 @@ class google_chrome::params() {
   $defaults_file          = '/etc/default/google-chrome'
   $defaults_proxy_pac_url = undef
 
-  case $::osfamily {
+  case $facts['os']['family'] {
     'RedHat' : {
-      if $::operatingsystemmajrelease == 6 {
+      if versioncmp($facts['os']['release']['major'], '6') == 0 {
         fail('Operating system not supported by Google Chrome')
       }
       $repo_base_url = 'https://dl.google.com/linux/chrome/rpm/stable/x86_64'
@@ -23,7 +27,7 @@ class google_chrome::params() {
       $repo_base_url = '[arch=amd64] https://dl.google.com/linux/chrome/deb/'
     }
     default: {
-      fail("Unsupported operating system family ${::osfamily}")
+      fail("Unsupported operating system family ${facts['os']['family']}")
     }
   }
 }

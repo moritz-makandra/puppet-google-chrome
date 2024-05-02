@@ -7,42 +7,76 @@
   "source": "https://github.com/jamesnetherton/puppet-google-chrome",
   "project_page": "https://forge.puppetlabs.com/jamesnetherton/google_chrome",
   "issues_url": "https://github.com/jamesnetherton/puppet-google-chrome/issues",
-  "tags": ["chrome", "google", "browser"],
+  "tags": [
+    "chrome",
+    "google",
+    "browser"
+  ],
   "operatingsystem_support": [
     {
-    "operatingsystem":"Fedora",
-    "operatingsystemrelease":[ "29", "30", "31" ]
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "29",
+        "30",
+        "31"
+      ]
     },
     {
-    "operatingsystem":"RedHat",
-    "operatingsystemrelease":[ "7" ]
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
     },
     {
-    "operatingsystem": "CentOS",
-    "operatingsystemrelease": [ "7" ]
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
     },
     {
-    "operatingsystem": "Ubuntu",
-    "operatingsystemrelease": [ "16.04", "18.04" ]
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "20.04",
+        "22.04"
+      ]
     },
     {
-    "operatingsystem": "Debian",
-    "operatingsystemrelease": [ "7", "8", "9", "10" ]
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
     },
     {
-    "operatingsystem": "SUSE",
-    "operatingsystemrelease": [ "13.1", "13.2", "42.1", "42.2" ]
+      "operatingsystem": "SUSE",
+      "operatingsystemrelease": [
+        "13.1",
+        "13.2",
+        "42.1",
+        "42.2"
+      ]
     }
-   ],
+  ],
   "dependencies": [
-    { "name": "puppetlabs/stdlib", "version_requirement": ">=4.0.0 <6.0.0" },
-    { "name": "puppetlabs/apt", "version_requirement": ">=2.0.0 <8.0.0" },
-    { "name": "puppet/zypprepo", "version_requirement": ">=2.0.0 <3.0.0" }
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">=4.0.0 <10.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">=2.0.0 <8.0.0"
+    },
+    {
+      "name": "puppet/zypprepo",
+      "version_requirement": ">=2.0.0 <3.0.0"
+    }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=5.0.0 <7.0.0"
+      "version_requirement": ">=6.0.0 <9.0.0"
     }
   ]
 }
