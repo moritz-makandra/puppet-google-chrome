@@ -80,15 +80,16 @@ class google_chrome::config (
       Exec['apt_update'] -> Package["${package_name}-${version}"]
 
       apt::source { $repo_name:
-        location => $repo_base_url,
-        release  => 'stable',
-        key      => {
+        location     => $repo_base_url,
+        release      => 'stable',
+        repos        => 'main',
+        architecture => $facts['os']['architecture'],
+        key          => {
           id      => $repo_gpg_key_id,
           source  => $repo_gpg_key,
           options => $repo_gpg_key_options,
         },
-        repos    => 'main',
-        include  => {
+        include      => {
           'src' => false,
         },
       }
