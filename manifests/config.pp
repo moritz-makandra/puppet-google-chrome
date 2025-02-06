@@ -85,7 +85,7 @@ class google_chrome::config (
         repos        => 'main',
         architecture => $facts['os']['architecture'],
         key          => {
-          id      => $repo_gpg_key_id,
+          name    => 'google_chrome.asc',
           source  => $repo_gpg_key,
           options => $repo_gpg_key_options,
         },

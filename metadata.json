@@ -70,7 +70,7 @@
     },
     {
       "name": "puppet/zypprepo",
-      "version_requirement": ">=2.0.0 <3.0.0"
+      "version_requirement": ">=10.0.0 <11.0.0"
     }
   ],
   "requirements": [
